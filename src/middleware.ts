@@ -27,13 +27,13 @@ export default async function middleware(req: NextRequest, res: NextResponse) {
     };
 
     // User has auth cookie, but it's has been tampered with
-    if (session.error && path !== "/unauthorized") {
+    if (session.error && path !== "/unauthorized-access") {
       console.log("Invalid session, redirecting to unauthorized");
-      return NextResponse.redirect(new URL("/unauthorized", req.url));
+      return NextResponse.redirect(new URL("/unauthorized-access", req.url));
     }
 
     // User has valid auth cookie, but is trying to access login or unauthorized page
-    if (!session.error && (path === "/unauthorized" || path === "/login")) {
+    if (!session.error && (path === "/unauthorized-access" || path === "/login")) {
       console.log("Valid session, redirecting to dashboard");
       return NextResponse.redirect(new URL("/dashboard", req.url));
     }
@@ -42,7 +42,7 @@ export default async function middleware(req: NextRequest, res: NextResponse) {
   //   User doesn't have auth cookie, but is trying to access dashboard or unauthorized page
   if (
     !cookie &&
-    (path.includes("/dashboard") || path.includes("/unauthorized"))
+    (path.includes("/dashboard") || path.includes("/unauthorized-access"))
   ) {
     console.log("Cookie not found, redirecting to login");
     return NextResponse.redirect(new URL("/login", req.url));
