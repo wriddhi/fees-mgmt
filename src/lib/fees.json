@@ -1,0 +1,44 @@
+[
+  {
+    "order_id": "6b996241-9dc0-425f-8168-6f2ba769312a",
+    "student_id": 1024,
+    "amount": 23000,
+    "mode": "Cash",
+    "transaction_id": "74fb83e9-143b-4a98-9e66-553a66fba87b",
+    "payment_taken_by": "Accounts",
+    "payment_date": "7/3/2023, 2:35:02 AM"
+  },
+  {
+    "order_id": "9046470a-a235-4abc-bbae-49a16c7dc4b1",
+    "student_id": 512,
+    "amount": 22000,
+    "mode": "Draft",
+    "transaction_id": "0c7a6d0c-7eca-4248-a91a-35545df0db73",
+    "payment_taken_by": "Accounts",
+    "payment_date": "7/3/2023, 2:37:01 AM",
+    "bank_name": "STATE BANK OF INDIA",
+    "draft_number": "123456789",
+    "draft_date": "2023-07-27"
+  },
+  {
+    "order_id": "77a03268-e7ee-4938-9396-822ba5fc4026",
+    "student_id": 467,
+    "amount": 20000,
+    "mode": "NetBanking",
+    "transaction_id": "5185854558454",
+    "payment_taken_by": "Accounts",
+    "payment_date": "7/3/2023, 2:37:38 AM"
+  },
+  {
+    "order_id": "93928d01-944b-4eed-a9b8-2ad6df83f221",
+    "student_id": 256,
+    "amount": 24000,
+    "mode": "Cheque",
+    "transaction_id": "5a4d5f57-12bc-43bc-959d-03f3907b5ce2",
+    "payment_taken_by": "Accounts",
+    "payment_date": "7/3/2023, 2:43:31 AM",
+    "bank_name": "ORIENTAL BANK OF COMMERCE",
+    "cheque_number": "eferregregregeg",
+    "cheque_date": "2023-07-28"
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "id": 256,
+    "roll": "001",
+    "name": "Rahul Sharma",
+    "class": "1",
+    "section": "A",
+    "fees": 24000,
+    "paid": true
+  },
+  {
+    "id": 512,
+    "roll": "002",
+    "name": "Priya Patel",
+    "class": "2",
+    "section": "B",
+    "fees": 22000,
+    "paid": true
+  },
+  {
+    "id": 128,
+    "roll": "003",
+    "name": "Aman Khan",
+    "class": "3",
+    "section": "C",
+    "fees": 28000,
+    "paid": false
+  },
+  {
+    "id": 1024,
+    "roll": "004",
+    "name": "Ananya Verma",
+    "class": "4",
+    "section": "A",
+    "fees": 23000,
+    "paid": true
+  },
+  {
+    "id": 768,
+    "roll": "005",
+    "name": "Aarav Gupta",
+    "class": "5",
+    "section": "B",
+    "fees": 29000,
+    "paid": false
+  },
+  {
+    "id": 640,
+    "roll": "006",
+    "name": "Neha Sharma",
+    "class": "6",
+    "section": "C",
+    "fees": 21000,
+    "paid": false
+  },
+  {
+    "id": 896,
+    "roll": "007",
+    "name": "Akshay Joshi",
+    "class": "7",
+    "section": "A",
+    "fees": 27000,
+    "paid": false
+  },
+  {
+    "id": 384,
+    "roll": "008",
+    "name": "Anjali Singh",
+    "class": "8",
+    "section": "B",
+    "fees": 25000,
+    "paid": false
+  },
+  {
+    "id": 1152,
+    "roll": "009",
+    "name": "Arjun Mehta",
+    "class": "9",
+    "section": "C",
+    "fees": 30000,
+    "paid": false
+  },
+  {
+    "id": 467,
+    "roll": "010",
+    "name": "Ishika Patel",
+    "class": "10",
+    "section": "A",
+    "fees": 20000,
+    "paid": true
+  },
+  {
+    "id": 1536,
+    "roll": "011",
+    "name": "Amit Singh",
+    "class": "11",
+    "section": "B",
+    "fees": 26000,
+    "paid": false
+  },
+  {
+    "id": 1792,
+    "roll": "012",
+    "name": "Divya Reddy",
+    "class": "12",
+    "section": "C",
+    "fees": 18000,
+    "paid": false
+  }
+]
