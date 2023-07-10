@@ -1,26 +1,35 @@
+import Button from "@/components/ui/Button";
 import { useAuth } from "@/contexts/auth";
 import { User } from "@/types/db.types";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 
 const Login = () => {
-  const { user, login } = useAuth();
 
+  const { login } = useAuth();
+
+  const router = useRouter();
   const [role, setRole] = useState<User["role"] | "">("");
   const [id, setId] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleSignIn = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!id || !password || !role) return alert("Please fill all the fields");
 
+    setLoading(true);
     const response = await login(id, password, role);
 
     if (response.success) {
       alert(response.message);
+      router.push("/dashboard");  
     } else {
       alert(response.message);
     }
+    setLoading(false);
   };
 
   return (
@@ -69,13 +78,8 @@ const Login = () => {
             setPassword(e.target.value);
           }}
         />
-        <button className="backlight p-2 w-full" type="submit">
-          Login
-        </button>
+        <Button loading={loading} type="submit" title="Login" theme="light" />
       </form>
-      <pre>
-        <code>{JSON.stringify(user, null, 2)}</code>
-      </pre>
     </main>
   );
 };
