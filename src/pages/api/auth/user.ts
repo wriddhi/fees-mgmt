@@ -1,6 +1,5 @@
 import type { User } from "@/types/db.types";
 import type { NextApiRequest, NextApiResponse } from "next";
-import { serialize } from "cookie";
 import { verify } from "jsonwebtoken";
 
 type Data = {

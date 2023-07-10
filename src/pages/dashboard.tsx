@@ -1,19 +1,20 @@
 import AccountsDashboard from "@/components/Accounts";
 import AdminDashboard from "@/components/Admin";
+import ParentsDashboard from "@/components/Parent";
 import Button from "@/components/ui/Button";
+import Spinner from "@/components/ui/spinner";
 import { useAuth } from "@/contexts/auth";
-import { User } from "@/types/db.types";
-import { log } from "console";
+import { User, Student } from "@/types/db.types";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
 
 const views = new Map<User["role"], JSX.Element>([
   ["admin", <AdminDashboard key={"admin"} />],
   ["accountant", <AccountsDashboard key={"accountant"} />],
-  ["parent", <div key={"parent"}>Guardian</div>],
+  ["parent", <ParentsDashboard key={"parent"} />],
 ]);
+
 
 const getFirstLetter = (name: string): string => {
   let firstLetter = "";
@@ -32,8 +33,7 @@ const Dashboard = () => {
 
   const [btnLoading, setBtnLoading] = useState<boolean>(false);
 
-  if (loading) return <div>Loading...</div>;
-
+  if (loading) return <Spinner />;
   if (!user) return <div>Not logged in</div>;
 
   return (
@@ -65,7 +65,7 @@ const Dashboard = () => {
                 Profile
               </Link>
             </li>
-            <li>
+            <li className="hover:bg-black/10 p-1">
               <Button
                 size="sm"
                 icon={<FiExternalLink />}
@@ -81,7 +81,7 @@ const Dashboard = () => {
           </ul>
         </div>
       </section>
-      {user.role && views.get(user.role)}
+      {views.get(user.role)}
     </main>
   );
 };

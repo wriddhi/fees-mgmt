@@ -67,11 +67,11 @@ const AdminDashboard = () => {
             Total Due Fees {`(${totalDueStudents})`}
           </h2>
           <p className="font-mono bg-white/10 p-2 w-fit rounded-xl">
-            &#8377; {totalDue}
+          &#8377; {totalDue}
           </p>
         </div>
       </section>
-      <PieChart
+      {/* <PieChart
         animate
         segmentsTabIndex={0}
         label={({ dataEntry }) => `${dataEntry.title} ${Math.round(dataEntry.percentage)} %`}
@@ -90,8 +90,7 @@ const AdminDashboard = () => {
         
         className="w-2/3 lg:w-1/4 mx-auto my-4"
         data={pieChartData}
-      />
-      {/* <pre>{JSON.stringify(students, null, 2)}</pre> */}
+      /> */}
     </main>
   );
 };
