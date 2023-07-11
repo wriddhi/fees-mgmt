@@ -32,10 +32,15 @@ export default async function handler(
     .from("fees_structure")
     .select("*")
     .eq("class", cls)
-    .eq("stream", stream)
-    .single();
+    .eq("stream", stream);
+
+  if (error) {
+    return res
+      .status(500)
+      .json({ error: true, message: "Internal server error", fees: null });
+  }
 
   return res
     .status(200)
-    .json({ error: false, message: "Fees structure found", fees: data });
+    .json({ error: false, message: "Fees structure found", fees: data[0] });
 }

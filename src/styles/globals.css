@@ -42,3 +42,9 @@
   background-color: hsl(0 0% 0%);
   box-shadow: var(---backlight);
 }
+
+@media print {
+  html {
+    font-family: var(--font-cirka);
+  }
+}
