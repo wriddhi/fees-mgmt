@@ -234,4 +234,6 @@ const Pdf = forwardRef((props: Props, ref: any) => {
   );
 });
 
+Pdf.displayName = "Pdf";
+
 export default Pdf;
