@@ -71,7 +71,7 @@ const AdminDashboard = () => {
           </p>
         </div>
       </section>
-      {/* <PieChart
+      <PieChart
         animate
         segmentsTabIndex={0}
         label={({ dataEntry }) => `${dataEntry.title} ${Math.round(dataEntry.percentage)} %`}
@@ -90,7 +90,7 @@ const AdminDashboard = () => {
         
         className="w-2/3 lg:w-1/4 mx-auto my-4"
         data={pieChartData}
-      /> */}
+      />
     </main>
   );
 };
